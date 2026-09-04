@@ -71,4 +71,12 @@ searchButton.addEventListener("click", async function () {
         condition.textContent =
             "Something went wrong. Please try again.";
     }
+}
+
+searchButton.addEventListener("click", searchWeather);
+
+cityInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        searchWeather();
+    }
 });
