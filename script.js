@@ -4,11 +4,15 @@ const cityInput = document.getElementById("city-input");
 searchButton.addEventListener("click", async function () {
     const city = cityInput.value;
 
-    const response = await fetch(
+    const locationResponse = await fetch(
         `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`
     );
 
-    const data = await response.json();
+    const locationData = await locationResponse.json();
 
-    console.log(data);
+    const latitude = locationData.results[0].latitude;
+    const longitude = locationData.results[0].longitude;
+
+    console.log("Latitude:", latitude);
+    console.log("Longitude:", longitude);
 });
