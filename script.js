@@ -1,3 +1,27 @@
+function changeWeatherTheme(code) {
+    if (code === 0) {
+        document.body.style.background =
+            "linear-gradient(135deg, #dce9f5, #b8d4ea)";
+    } else if (code >= 1 && code <= 3) {
+        document.body.style.background =
+            "linear-gradient(135deg, #d5dce2, #aebbc5)";
+    } else if (code >= 45 && code <= 48) {
+        document.body.style.background =
+            "linear-gradient(135deg, #cbd1d5, #9da7ad)";
+    } else if (code >= 51 && code <= 67) {
+        document.body.style.background =
+            "linear-gradient(135deg, #b7c9d8, #829caf)";
+    } else if (code >= 71 && code <= 77) {
+        document.body.style.background =
+            "linear-gradient(135deg, #e1e7eb, #bdcbd4)";
+    } else if (code >= 80 && code <= 82) {
+        document.body.style.background =
+            "linear-gradient(135deg, #aebfce, #71899c)";
+    } else if (code >= 95) {
+        document.body.style.background =
+            "linear-gradient(135deg, #6f7d89, #414b54)";
+    }
+}
 function getWeatherCondition(code) {
     if (code === 0) {
         return "Clear sky ☀️";
@@ -40,7 +64,6 @@ function getWeatherIcon(code) {
 
 const searchButton = document.getElementById("search-button");
 const cityInput = document.getElementById("city-input");
-
 const cityName = document.getElementById("city-name");
 const temperature = document.getElementById("temperature");
 const condition = document.getElementById("condition");
