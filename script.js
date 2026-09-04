@@ -29,6 +29,7 @@ const wind = document.getElementById("wind");
 
 searchButton.addEventListener("click", async function () {
     const city = cityInput.value.trim();
+    condition.textContent = "Loading...";
 
     if (city === "") {
         condition.textContent = "Please enter a city.";
