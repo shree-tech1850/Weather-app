@@ -65,6 +65,7 @@ searchButton.addEventListener("click", async function () {
         wind.textContent =
             `Wind: ${weatherData.current.wind_speed_10m} km/h`;
         condition.textContent = getWeatherCondition(weatherData.current.weather_code);
+        changeWeatherTheme(weatherData.current.weather_code);
 
     } catch (error) {
         condition.textContent =
