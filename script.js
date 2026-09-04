@@ -46,6 +46,7 @@ const temperature = document.getElementById("temperature");
 const condition = document.getElementById("condition");
 const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
+const weatherIcon = document.getElementById("weather-icon");
 
 searchButton.addEventListener("click", async function () {
     const city = cityInput.value.trim();
@@ -86,6 +87,7 @@ searchButton.addEventListener("click", async function () {
             `${weatherData.current.wind_speed_10m} km/h`;
         condition.textContent = getWeatherCondition(weatherData.current.weather_code);
         changeWeatherTheme(weatherData.current.weather_code);
+        weatherIcon.textContent = getWeatherIcon(weatherData.current.weather_code);
 
     } catch (error) {
         condition.textContent =
