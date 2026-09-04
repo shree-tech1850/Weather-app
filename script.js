@@ -73,7 +73,7 @@ searchButton.addEventListener("click", async function () {
         const longitude = locationData.results[0].longitude;
 
         const weatherResponse = await fetch(
-            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weathe_code` 
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code` 
         );
 
         const weatherData = await weatherResponse.json();
