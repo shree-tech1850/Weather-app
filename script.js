@@ -1,8 +1,14 @@
 const searchButton = document.getElementById("search-button");
 const cityInput = document.getElementById("city-input");
 
-searchButton.addEventListener("click", function () {
+searchButton.addEventListener("click", async function () {
     const city = cityInput.value;
 
-    console.log("Searching for:", city);
+    const response = await fetch(
+        `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`
+    );
+
+    const data = await response.json();
+
+    console.log(data);
 });
