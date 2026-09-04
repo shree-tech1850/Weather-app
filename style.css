@@ -93,3 +93,27 @@ h1 {
     font-size: 16px;
     color: #555;
 }
+.weather-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.detail {
+    flex: 1;
+    padding: 15px;
+    background: #f1f3f5;
+    border-radius: 15px;
+}
+
+.detail span {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.detail strong {
+    font-size: 17px;
+    color: #333;
+}
