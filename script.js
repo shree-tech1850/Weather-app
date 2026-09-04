@@ -61,9 +61,9 @@ searchButton.addEventListener("click", async function () {
         temperature.textContent =
             `${weatherData.current.temperature_2m}°C`;
         humidity.textContent =
-            `Humidity: ${weatherData.current.relative_humidity_2m}%`;
+            `${weatherData.current.relative_humidity_2m}%`;
         wind.textContent =
-            `Wind: ${weatherData.current.wind_speed_10m} km/h`;
+            `${weatherData.current.wind_speed_10m} km/h`;
         condition.textContent = getWeatherCondition(weatherData.current.weather_code);
         changeWeatherTheme(weatherData.current.weather_code);
 
